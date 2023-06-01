@@ -11,12 +11,12 @@
 #
 class Course < ApplicationRecord
 
-    has_many :students,
+    has_many :enrollments,
     primary_key: :id,
     foreign_key: :course_id,
     class_name: :Enrollment
     
-    has_many :enrollments,
-    through: :students,
-    source: :course
+    has_many :enrolled_students,
+    through: :enrollments,
+    source: :student
 end

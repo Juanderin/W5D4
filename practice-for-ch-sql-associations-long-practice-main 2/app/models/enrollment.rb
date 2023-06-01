@@ -21,4 +21,5 @@ class Enrollment < ApplicationRecord
     class_name: :Course
 
 
+
 end
