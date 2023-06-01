@@ -16,7 +16,7 @@ class Course < ApplicationRecord
     foreign_key: :course_id,
     class_name: :Enrollment
     
-
-
-
+    has_many :enrollments,
+    through: :students,
+    source: :course
 end
